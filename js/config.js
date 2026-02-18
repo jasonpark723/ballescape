@@ -14,5 +14,6 @@ const CONFIG = {
     thickness: 8,
     color: '#4444ff',
     segments: 48,
+    gapSize: 45, // Gap size in degrees
   },
 };

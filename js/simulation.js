@@ -17,12 +17,16 @@ const Simulation = {
     // Create ring at center of canvas
     const centerX = CONFIG.width / 2;
     const centerY = CONFIG.height / 2;
+    const gapStart = random(0, TWO_PI);
+    const gapSize = (CONFIG.rings.gapSize * PI) / 180; // Convert degrees to radians
     this.ring = new Ring(
       centerX,
       centerY,
       CONFIG.rings.innerRadius,
       CONFIG.rings.thickness,
-      CONFIG.rings.color
+      CONFIG.rings.color,
+      gapStart,
+      gapSize
     );
     this.ring.create(this.world);
 
